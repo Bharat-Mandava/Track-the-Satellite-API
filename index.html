@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <link type="text/css" rel="stylesheet" href="style.css">
+
+        <!--  
+            Leadlet CSS and Script should be added to enable the funtionality;
+            For documentation check here https://leafletjs.com/examples/quick-start/
+        -->   
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+
+        <style>
+                #mapid { height: 400px; }
+        </style>
+        
+        <title>Where_is_my_Satellite!</title>
+
+    </head>
+
+    <body>
+            <div>
+
+
+                 <h2>Satellite location:</h2>
+                <br>   
+                 Latitude: <span id="lat"></span> and Longitude: <span id="lon"></span></p> 
+                <br> <br>
+                         <div id="mapid"></div>
+   
+            </div>
+
+
+        <script src="app.js"></script>
+
+    </body>
+
+</html>
