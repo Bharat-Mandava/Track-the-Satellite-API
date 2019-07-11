@@ -33,6 +33,8 @@ const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' ; //for var
 const maptiles= L.tileLayer(tileUrl, {attributionOSM});
 maptiles.addTo(mymap);
 
+
+let allowZoom = true;
    
    
    //ISS PART
@@ -45,8 +47,14 @@ maptiles.addTo(mymap);
         const latitude = data.latitude;
         const longitude = data.longitude;
 
-             marker.setLatLng([latitude, longitude])
-             mymap.setView([latitude, longitude], 4)
+           
+                 marker.setLatLng([latitude, longitude])
+                 
+            if (allowZoom) {
+                 mymap.setView([latitude, longitude], 4)
+                 allowZoom = false;
+
+            }
        
         document.getElementById('lat').textContent = latitude.toFixed(2);
         document.getElementById('lon').textContent = longitude.toFixed(2);
