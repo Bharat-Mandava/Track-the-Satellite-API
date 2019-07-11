@@ -59,7 +59,10 @@ let allowZoom = true;
         document.getElementById('lat').textContent = latitude.toFixed(2);
         document.getElementById('lon').textContent = longitude.toFixed(2);
 
+    
+
     }
+    const reposition = ( ) => allowZoom = true;
     
      mySatellite()
 
