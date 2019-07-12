@@ -58,13 +58,31 @@ let allowZoom = true;
        
         document.getElementById('lat').textContent = latitude.toFixed(2);
         document.getElementById('lon').textContent = longitude.toFixed(2);
+        
+        
+        // const coordinateUrl = `https://api.wheretheiss.at/v1/coordinates/${latitude},${longitude}`;
+        const coordinateUrl = `https://api.wheretheiss.at/v1/coordinates/37.795517,-122.393693`;
+        
 
+
+        async function satellitecountry () {
+            const satelliteresponse = await fetch (coordinateUrl);
+            const satellitedata = await satelliteresponse.json();
+             console.log(satellitedata.country_code)
+            const countryCode = satellitedata.country_code;
+            document.getElementById('countrycode').textContent = countryCode;
+        }
+        satellitecountry()
+
+       
+        }
     
 
-    }
+
+   
     const reposition = ( ) => allowZoom = true;
     
      mySatellite()
-
+   
     // To track the position of Satellite from time to time or stop the app from tracking the satellite location, adjust the time(in milliseconds) and enable/disable the setInterval method below
-    setInterval(mySatellite, 1000);
+    // setInterval(mySatellite, 1000);

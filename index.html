@@ -17,7 +17,7 @@
         crossorigin=""></script>
 
         <style>
-                #mapid { height: 400px; }
+                #mapid { height: 500px; }
         </style>
         
         <title>Where_is_my_Satellite!</title>
@@ -30,13 +30,14 @@
 
                  <h2>Satellite location:</h2>
                 <br>   
-                 Latitude: <span id="lat"></span> and Longitude: <span id="lon"></span></p> 
+                 Latitude: <span id="lat">0.000000</span> <br> Longitude: <span id="lon">0.000000</span></p> 
+                 <br>
+                 Satellite is flying over: <span id="countrycode">No-Country</span>
                 <br> <br>
                 <button onclick= 'reposition()'> Reposition </button>
                          <div id="mapid"></div>
    
-            </div>
-
+            </div>  
             
 
 
